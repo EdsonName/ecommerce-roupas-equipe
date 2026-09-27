@@ -1,28 +1,52 @@
 /*
-LAYOUT.CSS
+Aqui fica a estrutura que todas as páginas compartilham.
 
-Esse arquivo vai cuidar da estrutura das páginas.
-
-O desenho que combinamos é:
-
-HEADER ocupando toda a largura
-
-COLUNA ESQUERDA | COLUNA CENTRAL | COLUNA DIREITA
-
-FOOTER ocupando toda a largura
-
-No desktop, o main deve usar CSS Grid com três colunas.
-
-Como ponto de partida, dá pra testar algo perto disso:
-coluna esquerda entre 20% e 25%
-coluna central entre 50% e 60%
-coluna direita entre 20% e 25%
-
-Não deixei o grid pronto de propósito. Essa parte vai ser feita e revisada pela equipe.
-
-No tablet a gente pode diminuir as laterais ou reorganizar a grade.
-
-No celular, provavelmente vai fazer mais sentido empilhar as áreas. Só precisamos cuidar pra coluna principal continuar fácil de acessar.
-
-Header e footer devem ir de uma ponta até a outra da tela.
+Header e footer usam a largura toda.
+No desktop, o conteúdo principal fica dividido em três colunas.
+Ainda não tem Liquid Glass ou acabamento visual aqui.
 */
+
+.site-header,
+.site-footer {
+  width: 100%;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.site-nav-list {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  width: 100%;
+}
+
+.column {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .site-main {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav-list {
+    flex-wrap: wrap;
+  }
+}

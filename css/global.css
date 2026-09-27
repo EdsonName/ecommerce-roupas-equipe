@@ -1,18 +1,23 @@
 /*
-GLOBAL.CSS
-
-Aqui vão ficar só as regras que realmente valem pro site inteiro.
-
-Quando a gente começar o CSS, esse arquivo pode receber coisas como:
-reset
-box-sizing
-fonte
-cores gerais
-variáveis em :root
-body
-links
-imagens
-algumas regras de acessibilidade
-
-Se o estilo serve só pra uma página ou componente específico, melhor não jogar aqui.
+Aqui ficam só as regras que realmente valem pro projeto inteiro.
+O visual vai sendo criado nas próximas tarefas.
 */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
