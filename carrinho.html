@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/liquid-glass.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/carrinho.css">
 </head>
 
 <body>
@@ -19,9 +20,28 @@
   </header>
 
   <main class="site-main">
+    
     <aside class="column column-left" aria-label="Coluna lateral esquerda"></aside>
 
-    <section class="column column-center" aria-label="Conteúdo do carrinho"></section>
+    <section class="column column-center" aria-label="Conteúdo do carrinho">
+      <h1>Seu Carrinho de Compras</h1>
+    <p>Confira os itens selecionados antes de finalizar a compra</p>
+       <!-- Lista dos itens do carrinho -->
+        <div class= "carrinho-itens">
+          <article class= "item-carrinho">
+            <h3>Nome do Produto</h3>
+            <p>Quantidade: 1</p>
+            <p>Preço: R$ 0,00</p>
+            <button type="button">Remover</button>
+          </article> 
+          
+                 <!-- Resumo do valor total e botão de compra -->
+         <div class="carrinho-resumo">
+          <h2>Resumo do Pedido</h2>
+          <p><strong>Total:</strong>R$ 0,00</p>
+          <button type="button"> Finalizar Compra</button>
+         </div>
+    </section>
 
     <aside class="column column-right" aria-label="Coluna lateral direita"></aside>
   </main>
